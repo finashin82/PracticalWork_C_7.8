@@ -20,6 +20,7 @@ namespace PracticalWork_C_7._8
         {
             // происходит чтение из файла, возвращается Worker
             // с запрашиваемым ID
+            
         }
 
         public void DeleteWorker(int id)
