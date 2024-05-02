@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace PracticalWork_C_7._8
         {
             // происходит чтение из файла, возвращается Worker
             // с запрашиваемым ID
-            
+
         }
 
         public void DeleteWorker(int id)
@@ -32,6 +33,7 @@ namespace PracticalWork_C_7._8
 
         public void AddWorker(Worker worker)
         {
+            Console.WriteLine($"Worker {worker}");
             // присваиваем worker уникальный ID,
             // дописываем нового worker в файл
         }

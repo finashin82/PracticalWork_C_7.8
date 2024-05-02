@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace PracticalWork_C_7._8
 {
+    /// <summary>
+    /// Стуртура, описывающая рабочего
+    /// </summary>
     struct Worker
     {
+        #region Структура
         /// <summary>
         /// ID записи
         /// </summary>
@@ -43,14 +47,46 @@ namespace PracticalWork_C_7._8
         /// Место рождения
         /// </summary>
         public string PlaceBirth { get; set; }
+        #endregion
 
+        #region Создание сотрудника
         /// <summary>
-        /// Печать
+        /// Создание сотрудника
         /// </summary>
-        /// <returns></returns>
-        public string Print()
+        /// <param name="Id"></param>
+        /// <param name="DateRecord"></param>
+        /// <param name="FIO"></param>
+        /// <param name="Age"></param>
+        /// <param name="Height"></param>
+        /// <param name="DateBirth"></param>
+        /// <param name="PlaceBirth"></param>
+        public Worker (int Id, DateTime DateRecord, string FIO, string Age, string Height, string DateBirth, string PlaceBirth)
         {
-            return ($"ID: {Id} Дата записи: {DateRecord} ФИО: {FIO} Возраст: {Age} Рост: {Height} Дата рождения {DateBirth} Место рождения: {PlaceBirth}");
+            this.Id = Id;
+            this.DateRecord = DateRecord;
+            this.FIO = FIO;
+            this.Age = Age;
+            this.Height = Height;
+            this.DateBirth = DateBirth;
+            this.PlaceBirth = PlaceBirth;
         }
+        #endregion
+
+        #region Конструктор
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="FIO"></param>
+        /// <param name="Age"></param>
+        /// <param name="Height"></param>
+        /// <param name="DateBirth"></param>
+        /// <param name="PlaceBirth"></param>
+        public Worker (int Id, string FIO, string Age, string Height, string DateBirth, string PlaceBirth):
+            this(Id, new DateTime(), FIO, Age, Height, DateBirth, PlaceBirth)
+        {
+        
+        }
+        #endregion
     }
 }
