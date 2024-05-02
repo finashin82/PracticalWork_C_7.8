@@ -10,7 +10,8 @@ namespace PracticalWork_C_7._8
     {
         static void Main(string[] args)
         {
-            string nameFileWorker = "Worker.csv";
+            
+            
         }
     }
 }
