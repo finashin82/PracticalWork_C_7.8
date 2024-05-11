@@ -47,6 +47,12 @@ namespace PracticalWork_C_7._8
         /// Место рождения
         /// </summary>
         public string PlaceBirth { get; set; }
+
+        public void Print()
+        {
+            Console.WriteLine($"{this.Id,5} {this.DateRecord,20} {this.FIO,30} {this.Age,7} {this.Height,4} {this.DateBirth,15} {this.PlaceBirth,15}");
+        }
+        
         #endregion
 
         #region Создание сотрудника
@@ -60,7 +66,7 @@ namespace PracticalWork_C_7._8
         /// <param name="Height"></param>
         /// <param name="DateBirth"></param>
         /// <param name="PlaceBirth"></param>
-        public Worker (int Id, DateTime DateRecord, string FIO, string Age, string Height, string DateBirth, string PlaceBirth)
+        public Worker(int Id, DateTime DateRecord, string FIO, string Age, string Height, string DateBirth, string PlaceBirth)
         {
             this.Id = Id;
             this.DateRecord = DateRecord;
@@ -71,7 +77,7 @@ namespace PracticalWork_C_7._8
             this.PlaceBirth = PlaceBirth;
         }
         #endregion
-
+        
         #region Конструктор
         /// <summary>
         /// Конструктор
@@ -82,11 +88,11 @@ namespace PracticalWork_C_7._8
         /// <param name="Height"></param>
         /// <param name="DateBirth"></param>
         /// <param name="PlaceBirth"></param>
-        public Worker (int Id, string FIO, string Age, string Height, string DateBirth, string PlaceBirth):
-            this(Id, new DateTime(), FIO, Age, Height, DateBirth, PlaceBirth)
-        {
-        
-        }
+        //public Worker(int Id, string DateRecord, string FIO, string Age, string Height, string DateBirth, string PlaceBirth) :
+        //    this(Id, DateRecord, FIO, Age, Height, DateBirth, PlaceBirth)
+        //{
+
+        //}
         #endregion
     }
 }
